@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: .compose/Dockerfile.cms
+    labels:
+      com.docker.compose.description: "Activities Site (DjangoCMS)"
+    ports:
+      - "80:8000"
+    volumes:
+      - .:/usr/src/app
+    links:
+      - postgres
+    depends_on:
+      - postgres
+  postgres:
+    image: "postgres:alpine"
+    labels:
+      com.docker.compose.description: "Activities Site (Postgres)"
+    environment:
+      - "POSTGRES_DB=activities_site_db"
+      - "POSTGRES_PASSWORD=mysecretpassword"
+      - "POSTGRES_USER=postgres"

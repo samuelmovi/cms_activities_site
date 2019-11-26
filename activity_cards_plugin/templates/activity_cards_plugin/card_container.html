@@ -1,0 +1,9 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles i18n%}
+<div id="ishow-card-grid" class="w3-container w3-center ">
+    <div class="w3-container row">
+        {% for card in instance.child_plugin_instances %}
+			{% render_plugin card %}
+        {% endfor %}
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+{% load staticfiles cms_tags %}
+{% if instance.child_plugin_instances %}
+<div id="banner" class="w3-display-container" >
+    <div id="carousel">
+        {% for photo in instance.child_plugin_instances %}
+			{% render_plugin photo %}
+		{% endfor %}
+    </div>
+    <div id="carousel-logo" class="w3-display-topleft">
+        <a href="/">
+          <img src="{% static 'favicon.png' %}" class="w3-image" />
+        </a>
+    </div>
+</div>
+{% endif %}

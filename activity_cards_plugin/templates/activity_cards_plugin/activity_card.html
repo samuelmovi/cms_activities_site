@@ -1,0 +1,25 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles i18n%}
+<div class=" w3-third w3-border w3-hover-border-red w3-pale-red " >
+ 
+ <img class="w3-image" src="{{ instance.image.url }}" alt="{{ instance.name }}">
+ 
+ <button class="w3-button w3-block w3-pale-red w3-hover-red card-button"
+         onclick="document.getElementById('card_view{{instance.id}}').style.display='block'" >{{ instance.title }}<br>[+]
+ </button>
+</div>
+
+<div id="card_view{{instance.id}}" class="w3-modal w3-display-container">
+ <div class="w3-modal-content w3-card-4 w3-display-middle">
+   <header class="w3-container w3-teal">
+   <span onclick="document.getElementById('card_view{{instance.id}}').style.display='none'"
+     class="w3-button w3-display-topright">&times;</span>
+     <h2>{{ instance.title }}</h2>
+   </header>
+   <div class="w3-container card-modal-text">
+     {{ instance.text|safe }}
+   </div>
+   <footer class="w3-container w3-teal card-modal-link">
+     <a href="{{ instance.link }}" >{% trans '+Info' %}</a>
+   </footer>
+ </div>
+</div>

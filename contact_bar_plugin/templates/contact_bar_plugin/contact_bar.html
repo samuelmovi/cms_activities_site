@@ -1,0 +1,12 @@
+{% load staticfiles cms_tags %}
+
+<div id="contact-bar" class="contact-bar" >
+	<div class="contact-bar w3-bar">
+		<a href="/" class="w3-bar-item show-me"><img class="w3-image" src="{% static 'favicon.png' %}"/></a>
+		{% for contact in instance.child_plugin_instances %}
+			{% render_plugin contact %}
+		{% endfor %}
+		<button id="contact-burger" class="w3-bar-item contact-burger w3-hover-cyan">
+			<i class="fa fa-bars"></i>
+		</button>	</div>
+</div>
