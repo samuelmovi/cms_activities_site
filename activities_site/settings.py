@@ -32,7 +32,7 @@ SECRET_KEY = 'c)qs09@2jjhv9a^v+4*!##8u@l2t+9ryl6898xqa3zr@f-01(('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.20.0.3']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -189,6 +189,7 @@ INSTALLED_APPS = [
     'text_bubble_plugin',
     'contact_form_plugin',
     'activity_cards_plugin',
+    'navbar_plugin',
 ]
 
 LANGUAGES = (
@@ -229,9 +230,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'activities_site_db',
-        'HOST': '172.20.0.2',
+        'HOST': '172.19.0.2',
         'USER': 'postgres',
         'PASSWORD': 'mysecretpassword',
+        'PORT': 5432,
     }
     # 'default': {
     #     'CONN_MAX_AGE': 0,

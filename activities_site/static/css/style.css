@@ -18,15 +18,6 @@ html,body
 }
 
 /* djangoCMS stuff */
-.nav {
-    padding-left: 0;
-    background-color: red;
-}
-.nav li {
-    display: inline;
-    list-style-type: none;
-    padding-right: 20px;
-}
 .container {
     width: 940px;
     margin: 0 auto
@@ -93,6 +84,14 @@ html,body
 }
 
 .navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav li {
   float: left;
   display: block;
   text-align: center;

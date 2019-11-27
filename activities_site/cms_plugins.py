@@ -122,3 +122,15 @@ class ActivityCardPlugin(CMSPluginBase):
         context = super(ActivityCardPlugin, self).render(context, instance, placeholder)
         return context
 
+
+@plugin_pool.register_plugin
+class NavbarPlugin(CMSPluginBase):
+    model = CMSPlugin
+    name = _("Navigation Bar")
+    render_template = "navbar_plugin/navbar.html"
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        context = super(NavbarPlugin, self).render(context, instance, placeholder)
+        return context
+
