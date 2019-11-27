@@ -27,12 +27,6 @@ learning experience, and because I prefer my software lean. And and I like knowi
     - Create admin user: `python manage.py createsuperuser`
     - Start server: `python manage.py runserver 0.0.0.0:8000`
 
-## Usage
-- Create one page per type of activity
-- Create all other as sub-pages of that page
-- Add Card Grid showcasing subpages
-
-
 ## Layout
 It's a single-column responsive design. The final composition is up to the designer, but with the built-in components:
 - Contact Bar
@@ -48,6 +42,11 @@ Their structure is:
 - Photo Carousel in carousel area
 - 2 Text Bubbles in content area(for activity description, and for service details)
 - Contact Form in footer
+
+## Usage
+- Create one page per type of activity
+- Create all other as sub-pages of that page
+- Add Card Grid showcasing sub-pages
 
 
 ## Plugins
@@ -73,9 +72,6 @@ It add a minimalistic photo carousel, with a delay of 1.5 seconds.
 Usage:
 - Add a `PhotoCarousel` container to the page.
 - Add as many `CarouselPhotos` to the `PhotoCarousel` as you need.
-
-### Navigation Bar
-TODO
 
 ### Text Bubble
 Simple plugin that adds a blob of text inside of a round-corner colored "bubble".
@@ -107,14 +103,10 @@ The fields are:
 
 
 
-
-
-
-
-
-
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## License
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
