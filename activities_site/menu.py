@@ -5,16 +5,6 @@ from cms.menu_bases import CMSAttachMenu
 
 from cms.models import Page
 
-#
-# @menu_pool.register_menu
-# class ActivitiesMenu(Menu):
-#     def get_nodes(self, request):
-#         nodes = []
-#         n1 = NavigationNode(_('Activities'), "/", 1)
-#         nodes.append(n1)
-#         return nodes
-#
-
 
 @menu_pool.register_menu
 class OtherMenu(CMSAttachMenu):
@@ -35,8 +25,7 @@ class OtherMenu(CMSAttachMenu):
         for cat in categories:
             # create dropdown item for each category
             # populate with links for pages in category
+            pass
         
         return nodes
-    
-    
-# menu_pool.register_menu(OtherMenu)
+
