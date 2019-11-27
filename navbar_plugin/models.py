@@ -4,9 +4,9 @@ from cms.extensions import PageExtension
 from cms.extensions.extension_pool import extension_pool
 
 
-@extension_pool.register
+# @extension_pool.register
 class CategoryExtension(PageExtension):
     category = models.CharField(max_length=25)
 
 
-# extension_pool.register(IconExtension)
+extension_pool.register(CategoryExtension)

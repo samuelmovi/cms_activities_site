@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from .models import CategoryExtension
 
 
-@toolbar_pool.register
+# @toolbar_pool.register
 class CategoryExtensionToolbar(ExtensionToolbar):
     # defines the model for the current toolbar
     model = CategoryExtension
@@ -25,3 +25,5 @@ class CategoryExtensionToolbar(ExtensionToolbar):
                     disabled=not self.toolbar.edit_mode_active,
                     position=0)
 
+
+toolbar_pool.register(CategoryExtensionToolbar)
