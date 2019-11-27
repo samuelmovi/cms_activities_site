@@ -37,7 +37,7 @@ It's a single-column responsive design. The final composition is up to the desig
 
 ## Pages Types
 
-### Activity pages:
+### Activity pages
 Their structure is:
 - Photo Carousel in carousel area
 - 2 Text Bubbles in content area(for activity description, and for service details)
