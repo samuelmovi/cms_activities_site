@@ -6,7 +6,7 @@ from .models import CategoryExtension
 
 
 class CategoryExtensionAdmin(PageExtensionAdmin):
-    pass
+    model = CategoryExtension
 
 
 admin.site.register(CategoryExtension, CategoryExtensionAdmin)

@@ -7,7 +7,7 @@
           <button class="w3-button w3-hover-cyan">{{cat}}</button>
           <div class="w3-dropdown-content w3-bar-block">
             {% for data in sorted_pages.cat %}
-              <a href="{{{ data.link }}" class="w3-bar-item" ><p>{{ data.name }}</p></a>
+              <a href="{{ data.link }}" class="w3-bar-item" ><p>{{ data.name }}</p></a>
             {% endfor %}
           </div>
         </div>

@@ -6,8 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - wizards seem to have no visible effect
-- docker-compose up: Failed building wheel for Pillow, 
+- db not saving in db/
 
+
+## 2019-11-27
+### Added
+- docker-compose yaml file and web app dockerfile
 
 
 ## 2019-11-26

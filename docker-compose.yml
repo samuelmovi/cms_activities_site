@@ -4,6 +4,8 @@ services:
     image: "postgres:alpine"
     labels:
       com.docker.compose.description: "Activities Site (Postgres)"
+    volumes:
+      - ./db:/var/lib/postgresql/data
     environment:
       - "POSTGRES_DB=activities_site_db"
       - "POSTGRES_PASSWORD=mysecretpassword"
