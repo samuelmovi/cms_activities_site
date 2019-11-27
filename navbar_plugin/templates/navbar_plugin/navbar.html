@@ -1,0 +1,32 @@
+{% load staticfiles cms_tags i18n menu_tags%}
+<div id="navbar" class="w3-red navbar">
+    <div class="navbar w3-bar">
+        <a href="{% url 'my_site:base' %}" class="navbar-item w3-bar-item w3-button w3-cyan show-me">{%trans 'Activities' %}</a>
+        {% for type in activity_types %}
+        <div class="navbar-item w3-dropdown-hover">
+          <button class="w3-button w3-hover-cyan">{{type.type}}</button>
+          <div class="w3-dropdown-content w3-bar-block">
+          {% if all_activities %}
+            {% for activity in all_activities %}
+              {% if activity.type == type.type %}
+                <a href="{% url 'my_site:activity' activity.lang activity.type activity.name %}"
+                   class="w3-bar-item" ><p>{{ activity.name }}</p></a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+        {% if all_pages %}
+        {% for page in all_pages %}
+        {% if page.name != 'home' and page.name != 'inicio' and page.name != 'general-conditions' and page.name != 'condiciones-generales' %}
+        <a href="/{{page.name}}/" class="navbar-item w3-bar-item w3-button w3-hover-cyan">{{page.name}}</a>
+        {% endif %}
+        {% endfor %}
+        <a href="{% url 'my_site:contact' %}" class="navbar-item w3-bar-item w3-button w3-hover-cyan">{% trans 'Contact' %}</a>
+        {% endif %}
+		<button id="navbar-burger" class="w3-bar-item navbar-burger w3-hover-cyan">
+			<i class="fa fa-bars"></i>
+		</button>
+    </div>
+</div>
