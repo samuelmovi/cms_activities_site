@@ -189,7 +189,6 @@ INSTALLED_APPS = [
     'text_bubble_plugin',
     'contact_form_plugin',
     'activity_cards_plugin',
-    'navbar_plugin',
 ]
 
 LANGUAGES = (

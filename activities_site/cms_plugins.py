@@ -125,27 +125,3 @@ class ActivityCardPlugin(CMSPluginBase):
         return context
 
 
-@plugin_pool.register_plugin
-class NavbarPlugin(CMSPluginBase):
-    model = CMSPlugin
-    name = _("Navigation Bar")
-    render_template = "navbar_plugin/navbar.html"
-    cache = False
-
-    def render(self, context, instance, placeholder):
-        context = super(NavbarPlugin, self).render(context, instance, placeholder)
-
-        # categories = []
-        # sorted_pages = {}
-        # for page in Page.objects.all():
-        #     # if page.category not in categories:
-        #     #     categories[page.category] = []
-        #     data = {'name': page.name, 'link': page.link}
-        #     sorted_pages[page.category].append(data)
-        #
-        # context.update({
-        #     'categories': categories,
-        #     'sorted_pages': sorted_pages,
-        # })
-        return context
-

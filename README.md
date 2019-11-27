@@ -27,6 +27,12 @@ learning experience, and because I prefer my software lean. And and I like knowi
     - Create admin user: `python manage.py createsuperuser`
     - Start server: `python manage.py runserver 0.0.0.0:8000`
 
+## Usage
+- Create one page per type of activity
+- Create all other as sub-pages of that page
+- Add Card Grid showcasing subpages
+
+
 ## Layout
 It's a single-column responsive design. The final composition is up to the designer, but with the built-in components:
 - Contact Bar
