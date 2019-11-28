@@ -1,9 +1,7 @@
 {% load cms_tags menu_tags sekizai_tags staticfiles i18n%}
-<div class=" w3-third w3-border w3-hover-border-red w3-pale-red " >
- 
+<div class="activity-card w3-border w3-hover-border-red w3-pale-red " >
  <img class="w3-image" src="{{ instance.image.url }}" alt="{{ instance.name }}">
- 
- <button class="w3-button w3-block w3-pale-red w3-hover-red card-button"
+ <button class="w3-button w3-block w3-pale-red w3-hover-red"
          onclick="document.getElementById('card_view{{instance.id}}').style.display='block'" >{{ instance.title }}<br>[+]
  </button>
 </div>

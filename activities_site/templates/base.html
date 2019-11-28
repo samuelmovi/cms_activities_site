@@ -18,14 +18,13 @@
       <div id="page" class="w3-block w3-mobile w3-light-grey">
         {% static_placeholder "contact_bar" %}
         {% placeholder "carousel" %}
-        {% static_placeholder "navbar" %}
         {% show_menu 0 100 100 100%}
         <div id="content" class="w3-container w3-white w3-center" >
           <!-- CONTENT -->
           {% block content %}{% endblock %}
         </div>
         
-        <footer class=" w3-panel w3-cyan" >
+        <footer class="w3-panel w3-cyan" >
         {% static_placeholder 'footer' %}
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

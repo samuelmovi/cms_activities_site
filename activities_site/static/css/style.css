@@ -1,14 +1,4 @@
-/*
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
- */
- * {
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -116,27 +106,33 @@ html,body
  }
 
 /* Text Bubble */
-.bubble {
+.text-bubble {
   font-size:20px
 }
 
-/*** Experience **/
-#summary{
-  font-size:16px
-}
-#details{
-  font-size:16px
-}
-/********** iShow Card Grid *********/
-.card-button {
-	font-size: 12px;
-}
 
+/********** iShow Card Grid *********/
 .card-modal-text {
 	font-size: 14px;
 }
 
 .card-modal-link {
+	font-size: 12px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.activity-card {
+    max-width: 25%;
+    margin: 25px 25px 25px 25px;
+}
+
+.activity-card button {
 	font-size: 12px;
 }
 
