@@ -34,14 +34,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
+# nasty hack to get debug toolbar to show, not fit for production
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK": lambda request: True,
+}
+
+# allow connection for django-debug-toolbar, but they are not correct
+INTERNAL_IPS = ['127.0.0.1', '172.19.0.1', ]
+
 
 # Application definition
 
 
-# allow connection for django-debug-toolbar
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
 
 
 
@@ -133,9 +137,9 @@ TEMPLATES = [
 
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

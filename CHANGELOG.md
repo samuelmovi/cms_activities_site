@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - CMD to dockerfile to run server
-- django-debug-toolbar (not working yet)
+- django-debug-toolbar, but required bad hack, should be fixed up
 
 ## 2019-11-27
 ### Added
