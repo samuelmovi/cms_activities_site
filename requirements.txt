@@ -22,3 +22,4 @@ Pillow>=3.0
 six
 pytz
 psycopg2-binary
+django-debug-toolbar

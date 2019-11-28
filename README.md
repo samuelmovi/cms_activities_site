@@ -102,6 +102,50 @@ The fields are:
 - Experiences: text area for them to describe in length what they want (1000 characters)
 
 
+## Enable Django Debug Toolbar
+- Install django-debug-toolbar: `pip install django-debug-toolbar`
+- Add to `INSTALLED_APPS`: `'debug_toolbar',`
+- Add to `urls.py`:
+```pythonstub
+
+from django.conf import settings
+from django.urls import include, path 
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+
+    ] + urlpatterns
+    
+```
+- Add to `MIDDLEWARE`: `'debug_toolbar.middleware.DebugToolbarMiddleware',`
+- Add to `settings.py`:
+```pythonstub
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
+
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+    'debug_toolbar.panels.profiling.ProfilingPanel',
+]
+
+```
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

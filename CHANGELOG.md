@@ -6,14 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - wizards seem to have no visible effect
-
+- add captcha to form
 
 ## 2019-11-28
 ### Changed
 - db being saved to `db/` folder now
+- css stylesheet to better accommodate activity card grid
 
 ### Added
 - CMD to dockerfile to run server
+- django-debug-toolbar (not working yet)
 
 ## 2019-11-27
 ### Added
