@@ -91,14 +91,6 @@ html,body
   font-size: 14px;
 }
 
-.nav li {
-  float: left;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-}
-
 .navbar-item{
     color: #FFF0F0;
 }

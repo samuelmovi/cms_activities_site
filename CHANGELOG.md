@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - wizards seem to have no visible effect
-- db not saving in db/
 
+
+## 2019-11-28
+### Changed
+- db being saved to `db/` folder now
+
+### Added
+- CMD to dockerfile to run server
 
 ## 2019-11-27
 ### Added
