@@ -229,7 +229,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'activities_site_db',
-        'HOST': '172.19.0.2',
+        'HOST': '172.18.0.2',
         'USER': 'postgres',
         'PASSWORD': 'mysecretpassword',
         'PORT': 5432,
